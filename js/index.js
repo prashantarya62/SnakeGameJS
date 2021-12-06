@@ -10,7 +10,7 @@ let lastPaintTime = 0;
 let snakeArr = [
     {x: 13, y: 15}
 ];
-var person = window.prompt("Welcome \n To SnakeKing Game! ","Enter your name first");
+var person = window.prompt("Welcome to SnakeKing Game! \n Press arrow button to play! ","Enter your name first");
 musicSound.play();
 if (person!= null ) {
     document.getElementById('userBox').innerHTML = "Welcome to SnakeKing "+ person  ;
@@ -64,8 +64,6 @@ function gameEngine(){
         // musicSound.play();
     }
     
-    
-
     // If you have eaten the food, increment the score and regenerate the food
     if(snakeArr[0].y === food.y && snakeArr[0].x ===food.x){
         foodSound.play();
@@ -106,7 +104,7 @@ function gameEngine(){
         else{       
             snakeElement.classList.add('snake');
         }
-        board.appendChild(snakeElement); //for attaching snakeElement in board
+        board.appendChild(snakeElement); //for attaching snakeElement in boardgit
     });
     // Display the food
     foodElement = document.createElement('div');
